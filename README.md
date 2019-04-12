@@ -48,9 +48,20 @@ is clear and easy to read by your project manager.
 
 1. In Jest, what are the differences between `describe()` and `it()` globals,
    and what are good uses for them?
-1. What is the point of `Test Driven Development`? What do you think about this
+
+   - describe() breaks your test suite into components.
+   - it() is where you perform individual tests.
+
+2. What is the point of `Test Driven Development`? What do you think about this
    approach?
-1. Mention three types of automated tests.
+
+   - Test pieces of code even before you can test it manually because you're
+     only working in a feature or the code isn't ready for the first test.
+   - I like the idea of test my code before somebody else makes changes that can
+     affect it.
+
+3. Mention three types of automated tests.
+   - Mocha, Jasmine, Jest
 
 ## Project Set Up
 
@@ -64,16 +75,16 @@ is clear and easy to read by your project manager.
 
 Your finished project must include all of the following requirements:
 
-- [ ] use `jest` and `supertest` to write the tests.
-- [ ] Write the **tests BEFORE** writing the route handlers.
-- [ ] Your API must be have `POST` and `GET` endpoints for `/games`.
-- [ ] Write a **minimum** of three tests per endpoint.
+- [x] use `jest` and `supertest` to write the tests.
+- [x] Write the **tests BEFORE** writing the route handlers.
+- [x] Your API must be have `POST` and `GET` endpoints for `/games`.
+- [x] Write a **minimum** of three tests per endpoint.
 
 Below is a product specification covering the requirements for your endpoints.
 
 ### POST /games
 
-- [ ] The `POST /games` endpoint should take in an object that looks like this
+- [x] The `POST /games` endpoint should take in an object that looks like this
 
   ```js
   {
@@ -83,17 +94,17 @@ Below is a product specification covering the requirements for your endpoints.
   }
   ```
 
-- [ ] In the route handler, validate that the required fields are included
+- [x] In the route handler, validate that the required fields are included
       inside the body. If the information is incomplete, return a `422` status
       code.
-- [ ] Write tests to verify that the endpoint returns the correct HTTP status
+- [x] Write tests to verify that the endpoint returns the correct HTTP status
       code when receiving correct and incorrect game data.
 
 ### GET /games
 
-- [ ] The `GET /games` endpoint should return the list of games and HTTP status
+- [x] The `GET /games` endpoint should return the list of games and HTTP status
       code 200.
-- [ ] Write a test to make sure this endpoint always returns an array, even if
+- [x] Write a test to make sure this endpoint always returns an array, even if
       there are no games stored. If there are no games to return, the endpoint
       should return an empty array.
 
